@@ -8,3 +8,7 @@ C:\Users\Ran\Desktop\VMF Viewer\bin\Debug\VMF Viewer.pdb
 C:\Users\Ran\Desktop\VMF Viewer\obj\Debug\VMF Viewer.exe
 C:\Users\Ran\Desktop\VMF Viewer\obj\Debug\VMF Viewer.pdb
 C:\Users\Ran\Desktop\VMF Viewer\obj\Debug\VMF_Viewer.Controller.resources
+C:\Users\Ran\Desktop\VMF Viewer\obj\Debug\VMF_Viewer.Console.resources
+C:\Users\Ran\Desktop\VMF Viewer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ran\Desktop\VMF Viewer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ran\Desktop\VMF Viewer\obj\Debug\VMF Viewer.csproj.CopyComplete

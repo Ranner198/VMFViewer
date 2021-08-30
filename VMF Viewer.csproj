@@ -33,9 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>RoughSketch.ico</ApplicationIcon>
+    <ApplicationIcon>VMFViewer.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,14 +52,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Console.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Console.Designer.cs">
+      <DependentUpon>Console.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controller.Designer.cs">
       <DependentUpon>Controller.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lib\47001C\Enum_47001_CantcoReason.cs" />
+    <Compile Include="Lib\47001C\Enum_47001_CantproReason.cs" />
+    <Compile Include="Lib\47001C\Enum_47001_DataCompression.cs" />
+    <Compile Include="Lib\47001C\Enum_47001_FunctionAreaDesignator.cs" />
+    <Compile Include="Lib\47001C\Enum_47001_MessagePrecedenceCode.cs" />
+    <Compile Include="Lib\47001C\Enum_47001_MessageStandardVersion.cs" />
+    <Compile Include="Lib\47001C\Enum_47001_MessageSubType.cs" />
+    <Compile Include="Lib\47001C\Enum_47001_OperationIndicatorCode.cs" />
+    <Compile Include="Lib\47001C\Enum_47001_ReceiptComplianceCode.cs" />
+    <Compile Include="Lib\47001C\Enum_47001_SecurityClassification.cs" />
+    <Compile Include="Lib\47001C\Enum_47001_UserMessageFormat.cs" />
+    <Compile Include="Lib\47001C\Enum_47001_Version.cs" />
+    <Compile Include="Lib\Bitwise\BinaryBitReaderHelper.cs" />
+    <Compile Include="Lib\Bitwise\BinaryBitWriterHelper.cs" />
+    <Compile Include="Lib\Bitwise\BinaryByteSwapHelper.cs" />
+    <Compile Include="Lib\Compression\LZ77.cs" />
+    <Compile Include="Lib\Compression\LZW.cs" />
+    <Compile Include="Lib\DFIDUI.cs" />
+    <Compile Include="Lib\K0501Data.cs" />
+    <Compile Include="Lib\K0519Data.cs" />
+    <Compile Include="Lib\K0701Data.cs" />
+    <Compile Include="Lib\K0702Data.cs" />
+    <Compile Include="Lib\MilStd47001.cs" />
+    <Compile Include="Lib\MilStd47001Data.cs" />
+    <Compile Include="Lib\MilStd6017.cs" />
+    <Compile Include="Multicast.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VMF.cs" />
+    <EmbeddedResource Include="Console.resx">
+      <DependentUpon>Console.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controller.resx">
       <DependentUpon>Controller.cs</DependentUpon>
     </EmbeddedResource>
@@ -69,6 +108,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -83,7 +123,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="RoughSketch.ico" />
+    <Content Include="VMFViewer.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
